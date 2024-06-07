@@ -27,6 +27,7 @@ void print_node(node* node)
   }
 }
 
+
 list* create_list()
 {
 	list* list;
