@@ -16,7 +16,6 @@ struct list {
 	node* head;
 };
 
-
 void print_node(node* node)
 {
   // DO NOT DELETE
