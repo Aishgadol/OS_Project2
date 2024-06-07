@@ -16,6 +16,7 @@ struct list {
 	node* head;
 };
 
+
 void print_node(node* node)
 {
   // DO NOT DELETE
@@ -94,7 +95,7 @@ void insert_value(list* list, int value)
 		return;
 	}
 	//if we got here than new node is not new head
-	pthread_mutex_unlock(&(list->lock));	
+	pthread_mutex_unlock(&(list->lock));
   while(curr->next){
 	  pthread_mutex_lock(&(curr->next->lock));
 	  if(curr->next->value<value){
@@ -162,7 +163,7 @@ void remove_value(list* list, int value)
 		pthread_mutex_unlock(&(curr->lock));
 		curr = temp;
 	}
-	
+
 	return;
 }
 
